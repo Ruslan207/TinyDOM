@@ -1,3 +1,6 @@
+//Copyright 2011 Sam Carr under the MIT License
+//See LICENSE for details.
+
 function appendHead(a){return document.head.innerHTML += a};
 function appendBody(a){return document.body.innerHTML += a};
 
@@ -38,7 +41,7 @@ var $head = document.head;
 
 var $body = document.body;
 
-
+//buildSugar renamed HtmlSugar
 var HS=function(c){function f(a,b){c.push([]);return d(a,b)}function d(a,b){b=""+(b||"");a&&e("<",a,">");b&&e(b);a&&e("</",a.split(" ")[0],">");return d}d.toString=function(){return c.pop().join("")};function e(){c[c.length-1].push(c.join.call(arguments,""))}return f}([]);
 
 

@@ -1,0 +1,45 @@
+From 483efc322cdd29eb249bdb5197c70a3e721974fe Mon Sep 17 00:00:00 2001
+From: ctult <samcarr1125@yahoo.com>
+Date: Sat, 10 Sep 2011 15:50:43 +0000
+Subject: [PATCH] Added README.md
+
+---
+ README.md |   25 +++++++++++++++++++++++++
+ 1 files changed, 25 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+diff --git a/README.md b/README.md
+new file mode 100644
+index 0000000..dd630b5
+--- /dev/null
++++ b/README.md
+@@ -0,0 +1,25 @@
++TinyDOM
++=======
++
++TinyDOM is a very basic DOM manipulation library.
++
++
++Documentation
++-------------
++
++###appendHead
++
++Appends HTML to the head.
++
++####Example
++```javascript
++appendHead('<script>alert("XSS!")</script>');
++```
++
++###appendBody
++
++Appends HTML to the body.
++
++```javascript
++appendBody('<h1>This will be appended!</h1>');
++```
+\ No newline at end of file
+-- 
+1.7.0.5
+
