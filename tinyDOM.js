@@ -3,11 +3,6 @@
 (function () {
     //Root, or window.
     var root = this;
-    //These are the export names.
-    //For example, if it is ["tinyDOM", "$"] then you could call tinyDOM by tinyDOM and $.
-    //It won't write over varibles.  Which means that if you had (for example) jQuery, it would not rewrite $.
-    //You would be able to do it yourself, though with var $ = tinyDOM;
-    var name = ["tinyDOM", "$"];
     var $ = function () {};
     $.appendHead = function (a) {
         return document.head.innerHTML += a
@@ -98,25 +93,7 @@
         return f
     }([]);
 
-    //Taken from Underscore's _.each
-    var each = function (obj, iterator, context) {
-        if (obj == null) return;
-        if (Array.prototype.forEach && obj.forEach === nativeForEach) {
-            obj.forEach(iterator, context);
-        } else if (obj.length === +obj.length) {
-            for (var i = 0, l = obj.length; i < l; i++) {
-                if (i in obj && iterator.call(context, obj[i], i, obj) === breaker) return;
-            }
-        } else {
-            for (var key in obj) {
-                if (hasOwnProperty.call(obj, key)) {
-                    if (iterator.call(context, obj[key], key, obj) === breaker) return;
-                }
-            }
-        }
-    };
-
-    each(name, function (a) {
-        root[a] = $;
-    });
+//Always will replace tinyDOM
+root['tinyDOM'] = $;
+if (!root['$']) root['$'] = $;
 })();
