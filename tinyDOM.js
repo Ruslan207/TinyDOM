@@ -23,10 +23,10 @@
 
 
     $.replaceHead = function (a) {
-        return document.head.innerHTML = a ? true : false
+        return document.head.innerHTML = a;
     };
     $.replaceBody = function (a) {
-        return document.body.innerHTML = a ? true : false
+        return document.body.innerHTML = a;
     };
 
 
@@ -48,7 +48,7 @@
         x = document.getElementsByTagName('script')[0];
         x.parentNode.insertBefore(s, x);
     }
-
+/*
     //Currently Broken
     var loadCSS = function (url) {
             var sheet = document.createElement("link");
@@ -57,7 +57,7 @@
             sheet.setAttribute("href", url);
             document.head.appendChild(sheet)
         };
-
+*/
     $.id = function (a) {
         return document.getElementById(a)
     };
