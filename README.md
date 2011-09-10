@@ -6,7 +6,6 @@ TinyDOM is a very basic DOM manipulation library.
 
 Documentation
 -------------
-#WARNING!  This is incomplete.
 
 ###appendHead
 
