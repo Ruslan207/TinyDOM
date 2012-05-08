@@ -46,7 +46,7 @@ $.prependBody('<h1>This will be prepended!</h1>');
 Replaces the head with the HTML given.
 
 ```javascript
-$.replaceHead("<style>body{background:black}</style>");
+$.replaceHead("<style>body{background:black}</style>")
 ```
 
 ###replaceBody
@@ -54,7 +54,7 @@ $.replaceHead("<style>body{background:black}</style>");
 Replaces the body with the HTML given.
 
 ```javascript
-$.replaceBody("<h1>Ha!</h1>");
+$.replaceBody("<h1>XSS</h1>")
 ```
 
 ###clearHead
@@ -62,7 +62,7 @@ $.replaceBody("<h1>Ha!</h1>");
 Clears all elements in the head.
 
 ```javascript
-$.clearHead();
+$.clearHead()
 ```
 
 ###clearBody
@@ -70,7 +70,7 @@ $.clearHead();
 Clears all elements in the body.
 
 ```javascript
-$.clearBody();
+$.clearBody()
 ```
 
 ###loadJS
@@ -78,21 +78,21 @@ $.clearBody();
 Lazy loads a Javascript file.
 
 ```javascript
-$.loadJS('https://raw.github.com/ctult/TinyDOM/master/tinyDOM.min.js');
+$.loadJS('https://raw.github.com/ctult/TinyDOM/master/tinyDOM.min.js')
 ```
 
 ###loadCSS
 
 Lazy loads a CSS file.
 
-#####Not Working
+$.loadCSS("style.css")
 
 ###id
 
 Shortcut for document.getElementById.
 
 ```javascript
-$.id('foo'); //equals document.getElementById
+$.id('foo') //equals document.getElementById
 ```
 
 ###tag
@@ -100,7 +100,7 @@ $.id('foo'); //equals document.getElementById
 Shortcut for document.getElementsByTagName.
 
 ```javascript
-$.tag('div');//equals document.getElementsByTagName('div');
+$.tag('div') //equals document.getElementsByTagName('div')
 ```
 
 ###head
@@ -108,7 +108,7 @@ $.tag('div');//equals document.getElementsByTagName('div');
 Shortcut for document.head.
 
 ```javascript
-$.head.innerHTML = "<script>alert('XSS!')</script>";
+$.head.innerHTML = "<script>alert('XSS!')</script>"s
 ```
 
 ###body
@@ -116,7 +116,7 @@ $.head.innerHTML = "<script>alert('XSS!')</script>";
 Shortcut for document.body.
 
 ```javascript
-$.body.innerHTML = "Hi!"l
+$.body.innerHTML = "Hi!"
 ```
 
 ###HS
@@ -129,6 +129,6 @@ $.HS('H1 id="hi"', 'Hi');
 
 ##Naming
 
-TinyDOM will use $ if $ is not taken.
+TinyDOM will use $ ONLY if $ is not taken.
 
-It will always use tinyDOM, even if it means overwrite.
+It will always use tinyDOM, even if it has to overwrite the original.
