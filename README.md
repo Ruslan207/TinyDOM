@@ -85,7 +85,9 @@ $.loadJS('https://raw.github.com/ctult/TinyDOM/master/tinyDOM.min.js')
 
 Lazy loads a CSS file.
 
+```javascript
 $.loadCSS("style.css")
+```
 
 ###id
 
